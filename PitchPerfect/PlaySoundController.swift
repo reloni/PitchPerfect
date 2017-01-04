@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlaySoundController.swift
 //  PitchPerfect
 //
 //  Created by Anton Efimenko on 04.01.17.
@@ -8,18 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class PlaySoundController : UIViewController {
+	var voiceFile: URL!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
 }
-
