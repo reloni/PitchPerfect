@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,8 +77,94 @@
                     <view key="view" contentMode="scaleToFill" id="VOB-MO-zF4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1n2-44-Yvh">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s7X-I7-Sdp">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="126"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4y-2V-DlL">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="slow"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="r7J-Gr-47x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibs-Ms-pFH">
+                                                <rect key="frame" x="144" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="fast"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="awH-71-FFd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iF2-Me-g7O">
+                                        <rect key="frame" x="0.0" y="126" width="288" height="126"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unj-3b-5Hm">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="chipmunk"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="BiA-3C-fEp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htF-VX-M6k">
+                                                <rect key="frame" x="144" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="darthvader"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="uNa-RB-y4E"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="z0j-iE-l9V">
+                                        <rect key="frame" x="0.0" y="252" width="288" height="126"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYG-hJ-uNP">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="echo"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="qJa-aC-tZc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-kS-33C">
+                                                <rect key="frame" x="144" y="0.0" width="144" height="126"/>
+                                                <state key="normal" image="reverb"/>
+                                                <connections>
+                                                    <action selector="play:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="Ogs-Ok-Vuu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-z0-ed3">
+                                        <rect key="frame" x="0.0" y="378" width="288" height="126"/>
+                                        <state key="normal" image="stop"/>
+                                        <connections>
+                                            <action selector="stop:" destination="Gzk-Av-mLp" eventType="touchUpInside" id="0OI-DT-HjY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1n2-44-Yvh" firstAttribute="top" secondItem="4Bt-1Q-hdb" secondAttribute="bottom" id="PL4-2z-Dck"/>
+                            <constraint firstItem="yc2-Ks-F7o" firstAttribute="top" secondItem="1n2-44-Yvh" secondAttribute="bottom" id="j24-Zw-rhj"/>
+                            <constraint firstItem="1n2-44-Yvh" firstAttribute="leading" secondItem="VOB-MO-zF4" secondAttribute="leadingMargin" id="lD5-zv-Zri"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1n2-44-Yvh" secondAttribute="trailing" id="rjK-8g-uu2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chipmunkButton" destination="Unj-3b-5Hm" id="5ID-G0-ZyJ"/>
+                        <outlet property="echoButton" destination="FYG-hJ-uNP" id="dy7-H6-4d4"/>
+                        <outlet property="rabbitButton" destination="ibs-Ms-pFH" id="snU-pm-0XM"/>
+                        <outlet property="reverbButton" destination="9ro-kS-33C" id="ExV-6m-Ndj"/>
+                        <outlet property="snailButton" destination="X4y-2V-DlL" id="qSv-CM-Slj"/>
+                        <outlet property="stopButton" destination="4Va-z0-ed3" id="edQ-B2-C4u"/>
+                        <outlet property="vaderButton" destination="htF-VX-M6k" id="YOz-S4-qxB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9b-xg-UNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +190,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
+        <image name="echo" width="80" height="80"/>
+        <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="reverb" width="80" height="80"/>
+        <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
 </document>

@@ -13,6 +13,7 @@
 		6E3A4A051E1D5D7300A7BA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3A4A041E1D5D7300A7BA37 /* Assets.xcassets */; };
 		6E3A4A081E1D5D7300A7BA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3A4A061E1D5D7300A7BA37 /* LaunchScreen.storyboard */; };
 		6E3A4A101E1D644000A7BA37 /* PlaySoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A4A0F1E1D644000A7BA37 /* PlaySoundController.swift */; };
+		6E3A4A121E1D722D00A7BA37 /* PlaySoundController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A4A111E1D722D00A7BA37 /* PlaySoundController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6E3A4A071E1D5D7300A7BA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3A4A091E1D5D7300A7BA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E3A4A0F1E1D644000A7BA37 /* PlaySoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundController.swift; sourceTree = "<group>"; };
+		6E3A4A111E1D722D00A7BA37 /* PlaySoundController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6E3A49FD1E1D5D7300A7BA37 /* AppDelegate.swift */,
 				6E3A49FF1E1D5D7300A7BA37 /* RecordController.swift */,
 				6E3A4A0F1E1D644000A7BA37 /* PlaySoundController.swift */,
+				6E3A4A111E1D722D00A7BA37 /* PlaySoundController+Extensions.swift */,
 				6E3A4A011E1D5D7300A7BA37 /* Main.storyboard */,
 				6E3A4A041E1D5D7300A7BA37 /* Assets.xcassets */,
 				6E3A4A061E1D5D7300A7BA37 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3A4A001E1D5D7300A7BA37 /* RecordController.swift in Sources */,
+				6E3A4A121E1D722D00A7BA37 /* PlaySoundController+Extensions.swift in Sources */,
 				6E3A49FE1E1D5D7300A7BA37 /* AppDelegate.swift in Sources */,
 				6E3A4A101E1D644000A7BA37 /* PlaySoundController.swift in Sources */,
 			);

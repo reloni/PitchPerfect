@@ -28,7 +28,6 @@ class RecordController: UIViewController {
 	}
 
 	@IBAction func startRecord(_ sender: Any) {
-		//performSegue(withIdentifier: "ShowPlaySoundController", sender: nil)
 		do {
 			recordButton.isEnabled = false
 			stopButton.isEnabled = true
@@ -44,8 +43,15 @@ class RecordController: UIViewController {
 		} catch {
 			recordButton.isEnabled = true
 			stopButton.isEnabled = false
-			print("shit happens")
+			showErrorAlert(message: "Unable to start recording")
 		}
+	}
+	
+	func showErrorAlert(message: String) {
+		let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+		let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+		alert.addAction(ok)
+		present(alert, animated: true, completion: nil)
 	}
 	
 	@IBAction func stopRecord(_ sender: Any) {
@@ -68,7 +74,10 @@ class RecordController: UIViewController {
 
 extension RecordController : AVAudioRecorderDelegate {
 	func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-		guard flag else { return }
+		guard flag else {
+			showErrorAlert(message: "Unable to record sound")
+			return
+		}
 		performSegue(withIdentifier: "ShowPlaySoundController", sender: nil)
 	}
 }
