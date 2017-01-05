@@ -20,18 +20,23 @@ class RecordController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+		
+		AVAudioSession.sharedInstance().requestRecordPermission { response in
+			DispatchQueue.main.async {
+				self.recordButton.isEnabled = response
+			}
+			
+			if !response {
+				self.showErrorAlert(message: "Microphone permission denied. Go to setting to allow microphone access")
+			}
+		}
 	}
 
 	@IBAction func startRecord(_ sender: Any) {
+		recordButton.isEnabled = false
+		stopButton.isEnabled = true
+		
 		do {
-			recordButton.isEnabled = false
-			stopButton.isEnabled = true
-			
 			try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker)
 			recorder = try AVAudioRecorder(url: voiceFile, settings: [:])
 			recorder?.isMeteringEnabled = true

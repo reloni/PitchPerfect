@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-rV-pDr">
                                 <rect key="frame" x="106" y="184.5" width="107" height="200.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-5i-8xg">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-5i-8xg">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="100"/>
                                         <state key="normal" image="microphone"/>
                                         <connections>

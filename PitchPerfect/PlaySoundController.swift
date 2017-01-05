@@ -54,7 +54,10 @@ final class PlaySoundController : UIViewController {
 	}
 	
 	@IBAction func play(_ sender: UIButton) {
-		guard let audioFile = audioFile else { return }
+		guard let audioFile = audioFile else {
+			// do nothing if audioFile didn't initialized
+			return
+		}
 		switch SoundType(rawValue: sender.tag)! {
 		case .snail: playSound(audioFile: audioFile, rate: 0.5)
 		case .rabbit: playSound(audioFile: audioFile, rate: 1.5)
